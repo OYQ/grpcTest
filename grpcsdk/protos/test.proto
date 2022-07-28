@@ -1,0 +1,13 @@
+syntax = "proto3";
+package test;
+
+option go_package=".;test";
+option objc_class_prefix = "TEST";
+
+message TestRequest{}
+
+message TestResponse {}
+
+service TestService {
+  rpc Ping (TestRequest) returns (TestResponse) {}
+}
